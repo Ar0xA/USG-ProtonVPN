@@ -14,12 +14,12 @@ commit;save;exit<br/>
 <br/>
 <br/>
 - Now try it out with<br/>
-openvpn --config /config/user-data/{vpnfile} --auth-user-pass /config/user-data/{username/pw}
+openvpn --config /config/user-data/{vpnfile} --auth-user-pass /config/user-data/{username/pw}<br/>
 <br/>
 [now you should be able to browse the web normally and if you go see what your IP is, this should show the ProtonVPN ip, not your own.]<br/>
 <br/>
-- If all works, you wanna set this up a bit more persistent and run openvpn as a daemon:
-openvpn --config /config/user-data/serverlist.ovpn --auth-user-pass /config/user-data/protonvpn.user --daemon
+- If all works, you wanna set this up a bit more persistent and run openvpn as a daemon:<br/>
+openvpn --config /config/user-data/serverlist.ovpn --auth-user-pass /config/user-data/protonvpn.user --daemon<br/>
 <br/>
 If you want the NAT rules to be persistent you can create a config.gateway.json file on your controller. Here's an example of mine:<br/>
 <br/>
