@@ -42,5 +42,5 @@ If you want the NAT rules to be persistent you can create a config.gateway.json 
    }
 }
 
-The main downside of this method, if the system is rebooted the VPN will not be enabled since I havent figured out how to set custom commands persistent after a firmware upgrade.
+Note: The main downside of this method, if the system is rebooted the VPN will not be enabled since I havent figured out how to set custom commands persistent after a firmware upgrade.
 
