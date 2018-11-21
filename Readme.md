@@ -24,22 +24,23 @@ openvpn --config /config/user-data/serverlist.ovpn --auth-user-pass /config/user
 If you want the NAT rules to be persistent you can create a config.gateway.json file on your controller. Here's an example of mine:<br/>
 <br/>
 /usr/lib/unifi/data/sites/default/config.gateway.json<br/>
-{<br/>
-   "service":{<br/>
-      "nat":{<br/>
-         "rule":{<br/>
-            "5004":{<br/>
-               "description":"masq to vpn tun0",<br/>
-               "destination":{<br/>
-                  "address":"0.0.0.0/0"<br/>
-               },<br/>
-               "outbound-interface":"tun0",<br/>
-               "type":"masquerade"<br/>
-            }<br/>
-         }<br/>
-      }<br/>
-   }<br/>
-}<br/>
-<br/>
+<code>
+{
+   "service":{
+      "nat":{
+         "rule":{
+            "5004":{
+               "description":"masq to vpn tun0",
+               "destination":{
+                  "address":"0.0.0.0/0"
+               },
+               "outbound-interface":"tun0",
+               "type":"masquerade"
+            }
+         }
+      }
+   }
+}
+</code>
 Note: The main downside of this method, if the system is rebooted the VPN will not be enabled since I havent figured out how to set custom commands persistent after a firmware upgrade.
 
